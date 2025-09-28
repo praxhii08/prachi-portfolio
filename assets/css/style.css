@@ -1,1 +1,52 @@
 
+/* Modern & creative minimal CSS */
+:root{
+  --accent:#6C5CE7;
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4bf;
+  --glass: rgba(255,255,255,0.04);
+  --radius:18px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#071025 0%, #0f1724 100%);color:#e6eef8}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:28px}
+
+/* Nav */
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-weight:700;font-size:20px;letter-spacing:0.6px}
+.nav-right a{margin-left:18px;color:var(--muted)}
+
+/* Header */
+.header{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:32px;border-radius:var(--radius);backdrop-filter:blur(6px);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+.profile{
+  width:180px;height:180px;border-radius:18px;overflow:hidden;flex:0 0 180px;border:4px solid rgba(255,255,255,0.03)
+}
+.profile img{width:100%;height:100%;object-fit:cover;display:block}
+.header-content h1{margin:0;font-size:34px}
+.header-content p{color:var(--muted);margin-top:10px}
+
+/* Cards */
+.card{background:var(--card);padding:20px;border-radius:14px;margin-top:18px;box-shadow: 0 8px 28px rgba(0,0,0,0.6)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+
+/* Project list */
+.project{display:flex;flex-direction:column;gap:10px}
+.project .meta{color:var(--muted);font-size:13px}
+
+/* Footer */
+.footer{margin-top:28px;color:var(--muted);text-align:center;padding:20px}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#00b4d8);color:white;font-weight:600}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.header{flex-direction:column;align-items:flex-start}.contact-grid{grid-template-columns:1fr}}
